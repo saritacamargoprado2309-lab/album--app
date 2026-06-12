@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nuestro Álbum 💖</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME -->
+
+<section id="homeScreen" class="screen active">
+
+    <div class="home-container">
+
+        <h1>💖 Nuestro Álbum 💖</h1>
+
+        <p class="subtitle">
+            Nuestra colección especial de recuerdos
+        </p>
+
+        <div class="stats">
+
+            <div class="card">
+                <h2 id="collectedCount">0</h2>
+                <p>Obtenidos</p>
+            </div>
+
+            <div class="card">
+                <h2>67</h2>
+                <p>Total</p>
+            </div>
+
+        </div>
+
+        <button
+            class="menu-btn"
+            onclick="showScreen('albumScreen')">
+
+            📖 Mi Álbum
+
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="showScreen('packScreen')">
+
+            🎁 Abrir Sobre
+
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="showScreen('collectionScreen')">
+
+            🖼️ Mis Stickers
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ÁLBUM -->
+
+<section id="albumScreen" class="screen">
+
+    <header class="top-bar">
+
+        <button onclick="showScreen('homeScreen')">
+            🏠
+        </button>
+
+        <h2>Mi Álbum</h2>
+
+    </header>
+
+    <div class="album-wrapper">
+
+        <button
+            class="nav-btn"
+            onclick="prevPage()">
+
+            ⬅
+
+        </button>
+
+        <div class="book">
+
+            <div
+                id="leftContainer"
+                class="page-container">
+
+                <img
+                    id="leftPage"
+                    class="page-image">
+
+                <div
+                    id="leftSlots"
+                    class="slots-layer">
+                </div>
+
+            </div>
+
+            <div
+                id="rightContainer"
+                class="page-container">
+
+                <img
+                    id="rightPage"
+                    class="page-image">
+
+                <div
+                    id="rightSlots"
+                    class="slots-layer">
+                </div>
+
+            </div>
+
+        </div>
+
+        <button
+            class="nav-btn"
+            onclick="nextPage()">
+
+            ➡
+
+        </button>
+
+    </div>
+
+    <!-- NUEVO -->
+    <div id="albumStickers"></div>
+
+</section>
+
+<!-- SOBRES -->
+
+<section id="packScreen" class="screen">
+
+    <header class="top-bar">
+
+        <button onclick="showScreen('homeScreen')">
+            🏠
+        </button>
+
+        <h2>Abrir Sobre</h2>
+
+    </header>
+
+    <div class="pack-container">
+
+        <button
+            class="open-pack-btn"
+            onclick="openPack()">
+
+            🎁 Abrir Sobre
+
+        </button>
+
+        <div id="packResult"></div>
+
+    </div>
+
+</section>
+
+<!-- COLECCIÓN -->
+
+<section id="collectionScreen" class="screen">
+
+    <header class="top-bar">
+
+        <button onclick="showScreen('homeScreen')">
+            🏠
+        </button>
+
+        <h2>Mis Stickers</h2>
+
+    </header>
+
+    <div id="collectionGrid"></div>
+
+</section>
+
+<!-- BARRA INFERIOR -->
+
+<nav class="bottom-nav">
+
+    <button onclick="showScreen('homeScreen')">
+        🏠
+        <span>Home</span>
+    </button>
+
+    <button onclick="showScreen('albumScreen')">
+        📖
+        <span>Álbum</span>
+    </button>
+
+    <button onclick="showScreen('packScreen')">
+        🎁
+        <span>Sobres</span>
+    </button>
+
+    <button onclick="showScreen('collectionScreen')">
+        🖼️
+        <span>Stickers</span>
+    </button>
+
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
